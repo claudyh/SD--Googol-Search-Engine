@@ -1,0 +1,67 @@
+<head>
+    <link rel="stylesheet" th:href="@{/results.css}" />
+</head>
+<body>
+    <form method="GET" action= "/googol">
+        <button type="submit">Googol</button>
+    </form>
+    <h2>Search Results</h2>
+    <div class="my-results">
+        <ul>
+            <li th:if="${searchResults.empty}">
+                <p>No results found.</p>
+            </li>
+            <li th:each="array : ${searchResults}">
+                <span th:each="item : ${array}" th:text="${item} + ' '"></span>
+            </li>
+            <form method="GET" action= "/results" class="form1">
+                <input type="hidden" name="query" th:value="${query}"/>
+                <input type="hidden" name="searchType" th:value="${searchType}"/>
+                <input type="hidden" name="searchPage" th:value="${searchPage + 1}"/>
+                <button type="submit">Next</button>
+            </form>
+            <form method="GET" action= "/results" class="form2">
+                <input type="hidden" name="query" th:value="${query}"/>
+                <input type="hidden" name="searchType" th:value="${searchType}"/>
+                <input type="hidden" name="searchPage" th:value="${searchPage - 1 > 0 ? searchPage - 1 : 1}"/>
+                <button type="submit">Prev</button>
+            </form>
+        </ul>
+
+        <div class="bubbles">
+            <span style="--i:11;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:9;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:8;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:7;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:9;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:8;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:7;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:10;"></span>  
+        </div>
+    </div>

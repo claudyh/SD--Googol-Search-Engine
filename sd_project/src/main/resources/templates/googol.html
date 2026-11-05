@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Googol</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer th:src="@{/app.js}"></script>
+    
+    <link rel="stylesheet" th:href="@{/googol.css}" />
+</head>
+<body>
+    <div class="bubbles">
+        <span style="--i:11;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:9;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:8;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:9;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:8;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:10;"></span>
+           
+    </div>
+    <div id="um">
+        <form method="GET" action="/results">
+            <h2>GOOGOL</h2>
+            <div id="dois">
+                <input type="text" name="query">
+            </div>
+            <button type="submit" name="searchType" value="1">Add URL</button>
+            <button type="submit" name="searchType" value="2">Search by Word</button>
+            <button type="submit" name="searchType" value="3">Search by Link</button>
+        </form>
+    </div>
+    <div id="messages"></div>
+</body>
+</html>

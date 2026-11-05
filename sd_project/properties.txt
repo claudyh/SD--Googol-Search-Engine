@@ -1,0 +1,4 @@
+RMI Address: localhost
+RMI Port: 1099
+Multicast Address: 224.3.2.1
+Multicast Port: 4321
